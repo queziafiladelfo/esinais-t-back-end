@@ -4,6 +4,8 @@ const path = require('path'); //permitire acesso a imagens
 
 const routes = require('./routes.js');
 
+require("dotenv").config();
+
 require('./database');
 
 const app = express();
@@ -22,6 +24,8 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-app.listen(8080, () => {
-    console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    // console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+    console.log(`Backend running on ${PORT}`);
 });
