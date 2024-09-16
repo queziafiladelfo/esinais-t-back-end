@@ -24,8 +24,14 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-    // console.log("Servidor iniciado na porta 8080: http://localhost:8080");
-    console.log(`Backend running on ${PORT}`);
+// const PORT = process.env.PORT;
+// app.listen(PORT, () => {
+//     // console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+//     console.log(`Backend running on ${PORT}`);
+// });
+
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+   
 });
